@@ -1,0 +1,542 @@
+
+:root {
+    --marrom: #8C5A2B;
+    --laranja: #C68642;
+    --verde: #6D8B4E;
+    --areia: #F5E6D3;
+    --texto: #333;
+    --branco: #ffffff;
+    --preto: #1a1a1a;
+    --cinza-claro: #f4f4f4;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+    background-color: var(--branco);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header e Navegação */
+header {
+    background: var(--branco);
+    box-shadow: 0 2px 10px var(--sombra);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--marrom);
+}
+
+.logo span {
+    color: var(--verde);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--marrom);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/SERRA_DA_CAPIVARA03.jpg/1200px-SERRA_DA_CAPIVARA03.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background: var(--marrom);
+    color: var(--branco);
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background: var(--laranja);
+    transform: translateY(-3px);
+}
+
+/* Estilo Comum de Seções */
+.secao-conteudo {
+    padding: 100px 0;
+}
+
+.secao-alternada {
+    padding: 100px 0;
+    background-color: var(--areia);
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-secao span {
+    color: var(--verde);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.titulo-secao h2 {
+    font-size: 2.5rem;
+    color: var(--marrom);
+    margin-top: 10px;
+}
+
+/* Grid História */
+.grid-historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.texto-historia p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.texto-historia blockquote {
+    border-left: 5px solid var(--laranja);
+    padding-left: 20px;
+    font-style: italic;
+    color: var(--marrom);
+    font-size: 1.2rem;
+    margin: 30px 0;
+}
+
+.imagem-historia img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0 var(--marrom);
+}
+
+/* Cards de Sítios */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-item {
+    background: var(--branco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--sombra);
+    transition: 0.3s;
+}
+
+.card-item:hover {
+    transform: translateY(-10px);
+}
+
+.card-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    color: var(--marrom);
+    margin-bottom: 10px;
+}
+
+/* Passeios */
+.lista-passeios {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.passeio-item {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 8px solid var(--verde);
+    box-shadow: 5px 5px 15px var(--sombra);
+}
+
+.passeio-texto h3 {
+    color: var(--marrom);
+    margin-bottom: 15px;
+}
+
+.detalhes {
+    list-style: none;
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.detalhes li {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+}
+
+/* Hospedagem */
+.grid-hospedagem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.cidade-card {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px var(--sombra);
+}
+
+.cidade-card h3 {
+    color: var(--verde);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.cidade-card p {
+    margin-bottom: 20px;
+}
+
+.cidade-card ul {
+    list-style: none;
+}
+
+.cidade-card li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cidade-card li::before {
+    content: "•";
+    color: var(--laranja);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Mapa Placeholder */
+.mapa-placeholder {
+    background: var(--cinza-claro);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Guias (Adaptado do seu código) */
+.guias {
+    padding: 100px 0;
+    background-color: #f9f4ee;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo h2 {
+    font-size: 2.5rem;
+    color: var(--marrom);
+    margin-bottom: 15px;
+}
+
+.titulo p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+}
+
+.cards-guias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.guia-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    transition: .4s;
+}
+
+.guia-card:hover {
+    transform: translateY(-8px);
+}
+
+.guia-foto {
+    width: 100%;
+    height: 300px;
+}
+
+.guia-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.guia-info {
+    padding: 25px;
+}
+
+.guia-info h3 {
+    color: var(--marrom);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.bloco-info {
+    margin-bottom: 15px;
+}
+
+.bloco-info h4 {
+    color: var(--verde);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.bloco-info p {
+    font-size: 0.9rem;
+    color: var(--texto);
+}
+
+.contato {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.contato p {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 80px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--laranja);
+}
+
+.footer-links h4, .footer-contato h4 {
+    margin-bottom: 20px;
+    color: var(--areia);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--branco);
+}
+
+.direitos {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria {
+    padding: 100px 0;
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #f9f4ee 100%
+    );
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 18px;
+}
+
+.foto {
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    position: relative;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .6s ease;
+}
+
+.foto:hover img {
+    transform: scale(1.08);
+}
+
+.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.alta {
+    grid-row: span 2;
+}
+
+.larga {
+    grid-column: span 2;
+}
+
+/* Responsividade da Galeria */
+
+@media (max-width: 992px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grande,
+    .alta,
+    .larga {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Responsividade */
+@media (max-width: 992px) {
+    .grid-historia, .grid-hospedagem {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Em um site real, aqui teria um menu hamburguer */
+    }
+    
+    .titulo-secao h2 {
+        font-size: 2rem;
+    }
+    
+    .imagem-historia img {
+        box-shadow: 10px 10px 0 var(--marrom);
+    }
+}
